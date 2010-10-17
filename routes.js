@@ -10,8 +10,7 @@ var route = function(req, res, urls, passed_args){
             args.unshift(req, res);
             if (typeof passed_args == 'array')
                 args.concat(passed_args);
-            urls[i][1].apply(this, args);
-            return true;
+            return urls[i][1].apply(this, args);
         }
     }
     return false;
